@@ -1,0 +1,373 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+/* ============================================================
+   UI GREENMETRIC UNILA — DARK THEME
+   #000000 background · #2F4F4F card · #FFD700 gold · #FF0000 red
+   ============================================================ */
+
+/* ── ROOT VARIABLES ─────────────────────────────────── */
+:root {
+  --bg-primary:   #000000;
+  --bg-card:      #2F4F4F;
+  --bg-card-dark: #1a2e2e;
+  --gold:         #FFD700;
+  --gold-soft:    rgba(255, 215, 0, 0.15);
+  --gold-border:  rgba(255, 215, 0, 0.3);
+  --red:          #FF0000;
+  --green:        #008000;
+  --text-primary: #FFFFFF;
+  --text-muted:   rgba(255,255,255,0.6);
+  --line:         rgba(255,215,0,0.15);
+}
+
+/* ── BODY & BACKGROUND ──────────────────────────────── */
+body,
+.fi-body,
+.fi-layout-sidebar,
+.fi-main {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── SIDEBAR ────────────────────────────────────────── */
+.fi-sidebar {
+  background: linear-gradient(180deg, #000000 0%, #0a1a1a 50%, #000000 100%) !important;
+  border-right: 1px solid var(--gold-border) !important;
+}
+
+.fi-sidebar-header {
+  border-bottom: 1px solid var(--gold-border) !important;
+  background: #000000 !important;
+}
+
+/* Nav item */
+.fi-sidebar-item-button {
+  border-radius: 8px !important;
+  margin-bottom: 2px;
+  color: var(--text-muted) !important;
+  transition: all 0.2s !important;
+}
+.fi-sidebar-item-button:hover {
+  background: var(--gold-soft) !important;
+  color: var(--gold) !important;
+}
+.fi-sidebar-item-button[aria-current] {
+  background: var(--gold-soft) !important;
+  color: var(--gold) !important;
+  border-left: 3px solid var(--gold) !important;
+}
+
+/* Nav group label */
+.fi-sidebar-group-label {
+  color: var(--gold) !important;
+  font-size: 10px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  opacity: 0.8;
+}
+
+/* Nav icon */
+.fi-sidebar-item-button svg {
+  color: inherit !important;
+}
+
+/* ── TOPBAR ─────────────────────────────────────────── */
+.fi-topbar {
+  background: #000000 !important;
+  border-bottom: 1px solid var(--gold-border) !important;
+}
+
+.fi-topbar-nav {
+  background: transparent !important;
+}
+
+/* ── CARDS / WIDGETS ────────────────────────────────── */
+.fi-wi-stats-overview-stat,
+.fi-wi,
+.fi-card,
+.fi-section {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+  border-radius: 12px !important;
+  color: var(--text-primary) !important;
+}
+
+/* Stat value */
+.fi-wi-stats-overview-stat-value {
+  color: var(--gold) !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Stat label */
+.fi-wi-stats-overview-stat-label {
+  color: var(--text-muted) !important;
+}
+
+/* Stat description */
+.fi-wi-stats-overview-stat-description {
+  color: var(--gold) !important;
+  opacity: 0.85;
+}
+
+/* ── TABLES ─────────────────────────────────────────── */
+.fi-ta-table,
+.fi-ta-content {
+  background: var(--bg-card) !important;
+  border-color: var(--gold-border) !important;
+}
+
+.fi-ta-header-cell {
+  background: var(--bg-card-dark) !important;
+  color: var(--gold) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--gold-border) !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+}
+
+.fi-ta-row {
+  border-bottom: 1px solid var(--line) !important;
+  color: var(--text-primary) !important;
+  transition: background 0.15s !important;
+}
+.fi-ta-row:hover {
+  background: var(--gold-soft) !important;
+}
+
+.fi-ta-cell {
+  color: var(--text-primary) !important;
+}
+
+/* ── BADGES ─────────────────────────────────────────── */
+.fi-badge {
+  font-weight: 600 !important;
+}
+.fi-badge[class*="success"] {
+  background: rgba(0,128,0,0.25) !important;
+  color: #00ff00 !important;
+  border: 1px solid rgba(0,128,0,0.4) !important;
+}
+.fi-badge[class*="warning"] {
+  background: rgba(255,215,0,0.2) !important;
+  color: var(--gold) !important;
+  border: 1px solid var(--gold-border) !important;
+}
+.fi-badge[class*="danger"] {
+  background: rgba(255,0,0,0.2) !important;
+  color: #ff6666 !important;
+  border: 1px solid rgba(255,0,0,0.3) !important;
+}
+.fi-badge[class*="gray"] {
+  background: rgba(255,255,255,0.1) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ── FORMS ──────────────────────────────────────────── */
+.fi-input,
+.fi-select-input,
+.fi-textarea {
+  background: var(--bg-card-dark) !important;
+  border: 1px solid var(--gold-border) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+}
+.fi-input:focus,
+.fi-select-input:focus,
+.fi-textarea:focus {
+  border-color: var(--gold) !important;
+  ring-color: var(--gold) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(255,215,0,0.2) !important;
+}
+
+.fi-label {
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* ── BUTTONS ────────────────────────────────────────── */
+.fi-btn-primary,
+.fi-btn[class*="primary"] {
+  background: var(--gold) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border: none !important;
+}
+.fi-btn-primary:hover {
+  background: #e6c200 !important;
+}
+
+.fi-btn[class*="danger"] {
+  background: var(--red) !important;
+  color: #ffffff !important;
+}
+
+/* ── PAGINATION ─────────────────────────────────────── */
+.fi-pagination-item a {
+  color: var(--text-muted) !important;
+  background: transparent !important;
+}
+.fi-pagination-item a:hover,
+.fi-pagination-item[aria-current="page"] a {
+  background: var(--gold-soft) !important;
+  color: var(--gold) !important;
+}
+
+/* ── HEADINGS & TITLES ──────────────────────────────── */
+.fi-header-heading,
+.fi-page-header h1,
+.fi-section-header-heading,
+.fi-wi-heading {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+
+.fi-header-subheading,
+.fi-section-header-description {
+  color: var(--text-muted) !important;
+}
+
+/* ── MODAL / DIALOG ─────────────────────────────────── */
+.fi-modal-window {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+}
+.fi-modal-header {
+  border-bottom: 1px solid var(--gold-border) !important;
+  color: var(--gold) !important;
+}
+
+/* ── DROPDOWN ───────────────────────────────────────── */
+.fi-dropdown-panel {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+}
+.fi-dropdown-list-item-label {
+  color: var(--text-primary) !important;
+}
+.fi-dropdown-list-item:hover {
+  background: var(--gold-soft) !important;
+}
+
+/* ── FILTERS ────────────────────────────────────────── */
+.fi-ta-filter-form {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+}
+
+/* ── SCROLLBAR ──────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,215,0,0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ── LOGIN PAGE ─────────────────────────────────────── */
+.fi-simple-layout,
+.fi-simple-main {
+  background: #000000 !important;
+}
+.fi-simple-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+}
+
+/* ── INDICATOR DASHBOARD PAGE ───────────────────────── */
+.ind-page .kpi-card {
+  background: var(--bg-card) !important;
+  border-color: var(--gold-border) !important;
+  color: var(--text-primary) !important;
+}
+.ind-page .kpi-value-dark,
+.ind-page .kpi-value-blue,
+.ind-page .kpi-value-amber,
+.ind-page .kpi-value-yellow {
+  color: var(--gold) !important;
+}
+.ind-page .kpi-value-green { color: #00cc00 !important; }
+.ind-page .kpi-value-gray  { color: rgba(255,255,255,0.5) !important; }
+.ind-page .kpi-label       { color: var(--text-muted) !important; }
+.ind-page .kpi-desc        { color: var(--text-muted) !important; }
+
+.ind-page .chart-card,
+.ind-page .activity-card,
+.ind-page .indicator-list,
+.ind-page .section-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+  color: var(--text-primary) !important;
+}
+.ind-page .chart-title  { color: var(--gold) !important; }
+.ind-page .chart-subtitle { color: var(--text-muted) !important; }
+.ind-page .chart-badge {
+  background: rgba(255,215,0,0.15) !important;
+  color: var(--gold) !important;
+}
+.ind-page .legend-section { border-top-color: var(--line) !important; }
+.ind-page .legend-item    { background: rgba(255,255,255,0.05) !important; }
+.ind-page .legend-name    { color: var(--text-primary) !important; }
+.ind-page .legend-score   { color: var(--text-muted) !important; }
+
+.ind-page .act-table th {
+  background: var(--bg-card-dark) !important;
+  color: var(--gold) !important;
+}
+.ind-page .act-table td {
+  color: var(--text-primary) !important;
+  border-top-color: var(--line) !important;
+}
+.ind-page .act-table tr:hover { background: var(--gold-soft) !important; }
+
+.ind-page .indicator-item {
+  background: rgba(255,255,255,0.04) !important;
+}
+.ind-page .indicator-item:hover { background: var(--gold-soft) !important; }
+.ind-page .indicator-name { color: var(--text-primary) !important; }
+.ind-page .indicator-desc { color: var(--text-muted) !important; }
+
+.ind-page .badge-verified {
+  background: rgba(0,128,0,0.25) !important;
+  color: #00ff00 !important;
+}
+.ind-page .badge-submitted {
+  background: rgba(255,215,0,0.2) !important;
+  color: var(--gold) !important;
+}
+.ind-page .badge-draft {
+  background: rgba(255,255,255,0.08) !important;
+  color: var(--text-muted) !important;
+}
+.ind-page .score-good   { color: #00cc00 !important; }
+.ind-page .score-medium { color: var(--gold) !important; }
+.ind-page .score-bad    { color: var(--red) !important; }
+
+.ind-page .activity-link { color: var(--gold) !important; }
+.ind-page .activity-link:hover { color: #e6c200 !important; }
+
+.ind-page .section-card-title,
+.ind-page .activity-title { color: var(--gold) !important; }
+
+/* ── SECTION HEADER BORDER ──────────────────────────── */
+.fi-section + .fi-section {
+  border-top: 1px solid var(--line) !important;
+}
+
+/* ── FILAMENT INFO WIDGET ────────────────────────────── */
+.fi-wi-account {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--gold-border) !important;
+  color: var(--text-primary) !important;
+}

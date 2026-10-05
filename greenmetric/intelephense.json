@@ -1,0 +1,6 @@
+{
+  "diagnosticsIgnore": [
+    "PHP0418",
+    "P1133"
+  ]
+}
